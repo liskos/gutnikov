@@ -1,6 +1,8 @@
-a = int(input())
-a100 = a // 100
-a50 = (a - a100 * 100) // 50
-a10 = (a - a50 * 50) // 100
-a1 = a - (a - a100 * 100) - (a - a50 * 50)
-print(a100, a50, a10, a1)
+a = []
+for i in range(11):
+    x, f = input().split()
+    x = int(x)
+    a.append([x, f])
+a.sort(key=lambda x:x[0])
+print(a)
+
