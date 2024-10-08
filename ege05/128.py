@@ -7,8 +7,9 @@ def f(x):
     return str(v[1]) + str(v[0])
 
 
+
 print(f(1284))
 for i in range(1000, 10000):
     if f(i) == "118":
         print(i)
-        break
+

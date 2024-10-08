@@ -8,6 +8,6 @@ def f(x):
 
 
 for i in range(1, 10000):
-    if f(i) > 155:
+    if f(i) > 115:
         print(i)
         break

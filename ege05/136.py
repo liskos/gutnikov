@@ -11,10 +11,8 @@ def f(x):
     return int(b, 2)
 
 
-s = 0
-k = 0
+a = set()
 for i in range(1, 10000):
-    k += 1
     if 16 <= f(i) <= 32:
-        s += 1
-print(k - s)
+        a.add(f(i))
+print(17-len(a))
