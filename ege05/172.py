@@ -4,6 +4,6 @@ def f(n):
     return int(a, 2)
 
 
-for i in range(131, 256):
-    if f(i) == 10:
+for i in range(0, 110):
+    if f(i) == 7:
         print(i)

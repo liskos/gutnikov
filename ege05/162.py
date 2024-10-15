@@ -5,5 +5,5 @@ def f(n):
 
 
 for i in range(1, 101):
-    if f(i) == 7:
+    if f(i) == 9:
         print(i)

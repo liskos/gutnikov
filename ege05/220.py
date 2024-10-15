@@ -1,13 +1,14 @@
 def f(n):
     s = str(n)
     s = sorted(s)
+    max1 = s[-1] + s[1]
     if s[0] != "0":
-        max = s[-1] + s[1]
-        min = s[0] + s[1]
+        min1 = s[0] + s[1]
+    elif s[1] != "0":
+        min1 = s[1] + "0"
     else:
-        min = s[1] + s[0]
-        max = s[-1] + s[1]
-    return  int(max) - int(min)
+        min1 = max1
+    return  int(max1) - int(min1)
 
 
 print(f(351))
