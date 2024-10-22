@@ -8,8 +8,8 @@ def f(n):
     return int(d, 2)
 
 
-k = 0
-for i in range(50, 81):
-    if f(i) > 80:
-        k += 1
-print(k)
+k = set()
+for i in range(1, 1000):
+    if 50 <= f(i) <= 80:
+        k.add(f(i))
+print(len(k), k)

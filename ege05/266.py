@@ -15,7 +15,7 @@ def f(n):
 
 
 k = 0
-for i in range(2, 1000):
+for i in range(2, 2000):
     if f(i) == 8:
         k += 1
 print(k)

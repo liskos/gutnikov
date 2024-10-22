@@ -7,6 +7,9 @@ def f(n):
     return int(b, 2)
 
 
-for i in range(1, 10000000000000):
-    if f(i) < 10000000000:
-        print(f(i))
+print(f(14))
+s = []
+for i in range(1, 100):
+    if f(i) < 126:
+        s.append(f(i))
+print(max(s))

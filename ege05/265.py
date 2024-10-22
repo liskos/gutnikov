@@ -3,8 +3,8 @@ def f(n):
         b = n // 3
     else:
         b = n - 1
-    if b % 5 == 0:
-        b //= 5
+    if b % 7 == 0:
+        b //= 7
     else:
         b -= 1
     if b % 11 == 0:
@@ -15,7 +15,7 @@ def f(n):
 
 
 k = 0
-for i in range(2, 1000):
+for i in range(2, 1500):
     if f(i) == 6:
         k += 1
 print(k)
