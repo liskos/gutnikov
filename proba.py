@@ -5,4 +5,3 @@ for i in range(11):
     a.append([x, f])
 a.sort(key=lambda x:x[0])
 print(a)
-
