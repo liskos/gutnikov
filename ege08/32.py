@@ -2,9 +2,11 @@ import itertools
 
 
 s = set()
-for a in itertools.product("1234", repeat=3):
+for a in itertools.product("ABCD", repeat=3):
     b = "".join(a)
-    if ("14" in b or "41" in b) and "23" not in b and "32" not in b:
-        s.add(a)
-        print(s)
+    ss = b.replace("ADA", "XXX")
+    ss = ss.replace("AD", "XX").replace("DA", "XX")
+    if ("A" not in ss) and ("BC" not in b) and ("CB" not in b):
+        s.add(b)
+print(s)
 print(len(s))

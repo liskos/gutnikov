@@ -1,11 +1,10 @@
 import itertools
 
 
-k = 0
-for a in itertools.product("12345", repeat=4):
+k = set()
+for a in itertools.product("ПИРОГ", repeat=4):
     b = "".join(a)
-    if b.count("4") <= 2:
-        if "14" in b or "34" in b or "54" in b:
-            k += 1
-        print(b)
-print(k)
+    ss = b.replace("ПО", "XX").replace("РО", "XX").replace("ГО", "XX")
+    if b.count("О") <= 2 and ("О" not in ss):
+        k.add(b)
+print(len(k))

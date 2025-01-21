@@ -1,3 +1,6 @@
+import functools
+
+@functools.lru_cache(None)
 def f( n ):
   x = 0
   x += 1
@@ -5,6 +8,7 @@ def f( n ):
     x += 1
     x += f(n-1)
     x += f(n-2)
+    x += 1
   return x
 
 
