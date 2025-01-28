@@ -3,6 +3,6 @@ import itertools
 
 s = set()
 for a in itertools.product("АБВГЭЮЯ", repeat=5):
-    if (a[-1] == "Я" or a[-1] == "Э" or a[-1] == "Ю") and (a[0] == "Я" or a[0] == "Э" or a[0] == "Ю"):
+    if (a[-1] in "ЭЮЯ") and (a[0] in "ЭЮЯ") and set(a[1:-1]) <= set("АБВГ"):
         s.add(a)
 print(len(s))
