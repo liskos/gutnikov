@@ -1,7 +1,6 @@
 import ipaddress
 
 
-for mask in range(33):
+for mask in range(10, 31):
     net = ipaddress.ip_network(f"111.233.75.16/{mask}", 0)
-    if net == "111.233.75.0":
-        print()
+    print(net, 2 ** (32-mask))
