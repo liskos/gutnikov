@@ -1,0 +1,6 @@
+import ipaddress
+
+
+for mask in range(10, 31):
+    net = ipaddress.ip_network(f"106.113.64.105/{mask}", 0)
+    print(net)
