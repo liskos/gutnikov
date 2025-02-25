@@ -1,9 +1,6 @@
-import functools
 import sys
 
-
 sys.setrecursionlimit(10000)
-@functools.lru_cache(None)
 def f(n):
     if n == 41:
         return 41
@@ -11,5 +8,4 @@ def f(n):
         return f(n - 1) - n
     return n * f(n - 2)
 
-
-print(f(9094)/f(9089))
+print(f(9094)//f(9089))

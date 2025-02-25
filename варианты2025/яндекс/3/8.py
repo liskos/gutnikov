@@ -3,8 +3,6 @@ import itertools
 
 d = set()
 for a in itertools.permutations("АРТЁМ", r=5):
-    b = "".join(a)
-    ss = b.replace("А", "X").replace("Ё", "X")
-    if "XX" not in a[:2] or "XX" not in a[-2:]:
+    if not (a[0] in "АЁ" and a[-1] in "АЁ"):
         d.add(a)
 print(len(d))
