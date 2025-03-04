@@ -4,4 +4,5 @@ for x in range(2, 11):
     while a > 0:
         s = [a % x] + s
         a //= x
-    print(s)
+    print(x, s)
+print(6+8+9+10)
