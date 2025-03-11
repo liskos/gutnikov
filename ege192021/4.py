@@ -22,7 +22,7 @@ for i in range(110):
             a[i][j] = "3"
 for i in range(110):
     for j in range(110):
-        if a[i][j] == " " and any(a[x][y] in "13" for x, y in f(i,j)):
+        if a[i][j] == " " and all(a[x][y] in "13" for x, y in f(i,j)):
             a[i][j] = "4"
 
 for s in range(1,48):
