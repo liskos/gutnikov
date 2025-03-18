@@ -1,5 +1,5 @@
 def f(x,y):
-    return (x-1,y),(x,y-1),(round(x/2),y),(x,round(y/2))
+    return (x-1,y),(x,y-1), ((x+1)//2,y),(x,(y+1)//2)
 
 a = [[" "] * 200 for _ in range(200)]
 
@@ -28,9 +28,6 @@ for i in range(200):
         if a[i][j] == " " and all(a[x][y] in "13" for x, y in f(i,j)):
             a[i][j] = "4"
 
-for s in range(11, 100):
-    if any(a[x][y] == "1" for x, y in f(10, s)):
-        print(s)
-        break
+print([s for s in range(11,100) if a[10][s] == "2"])
 print([s for s in range(11,100) if a[10][s] == "3"])
 print([s for s in range(11,100) if a[10][s] == "4"])

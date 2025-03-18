@@ -32,13 +32,14 @@ n=0
 g=0
 for k in range(1, 30):
     for s in range(1,30):
-        if any(a[x][y] == "1" for x, y in f(k, s)):
+        if a[k][s] == "2":
             n+=1
 print(n)
 
 print([s for s in range(1, 30) if a[6][s] == "3"])
+print(sum([1 for k in range(1, 30) for s in range(1, 30) if a[s][k]=="4"]))
 for k in range(1, 30):
     for s in range(1,30):
-        if any(a[x][y] == "4" for x, y in f(k, s)):
+        if a[k][s] == "4":
             g += 1
 print(g)
