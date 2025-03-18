@@ -4,3 +4,4 @@ for x in 0, 1:
             for w in 0, 1:
                 f = (not (not w or y) or x) or (not z and (not x or y))
                 print(x, y, z, w, "|", int(f))
+
