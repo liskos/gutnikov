@@ -1,5 +1,5 @@
 def f(x):
-    return (x + 3), (x * 3)
+    return (x + 2), (x * 3)
 
 a = [" "] * 2000
 
@@ -23,9 +23,6 @@ for i in range(2000):
     if a[i] == " " and all(a[x] in "13" for x in f(i)):
         a[i] = "4"
 
-for s in range(1,50):
-    if any(a[x] == "1" for x in f(s)):
-        print(s)
-        break
+print([s for s in range(1, 50) if a[s] == "2"])
 print([s for s in range(1,50) if a[s] == "3"])
 print([s for s in range(1,50) if a[s] == "4"])
