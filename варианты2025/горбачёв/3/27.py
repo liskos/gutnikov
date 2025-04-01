@@ -30,11 +30,12 @@ def centroid(claster):
     return min(r)[1]
 
 
-data = [list(map(float, line.split())) for line in open("27-a.txt")]
-clasters = clasterization(data, 0.5)
+data = [list(map(float, line.split())) for line in open("27-b.txt")]
+clasters = clasterization(data,  1)
+clasters = [c for c in clasters if len(c) >= 30]
 print([len(c) for c in clasters])
 visual(clasters)
 centrs = [centroid(c) for c in clasters]
 print(centrs)
 x, y = sum([p[0] for p in centrs]) / len(centrs), sum([p[1] for p in centrs]) / len(centrs)
-print(x * 100000, x * 100000)
+print(x * 100000, y * 100000)

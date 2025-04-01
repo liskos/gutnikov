@@ -24,7 +24,7 @@ for i in range(5000):
         a[i] = "4"
 
 
-
-#print([s for s in range(91, 5001) if a[s] == "2"])
+print([s for s in range(91, 5001) if a[s] == "1"])
+print([s for s in range(91, 5001) if a[s] == "2"])
 print([s for s in range(91, 5001) if a[s] == "3"])
 print([s for s in range(91, 5001) if a[s] == "4"])
