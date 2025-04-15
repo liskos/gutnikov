@@ -39,7 +39,7 @@ visual(clasters)
 centrs = [centroid(c) for c in clasters]
 print(centrs)
 x, y = sum([p[0] for p in centrs]) / len(centrs), sum([p[1] for p in centrs]) / len(centrs)
-print(x* 10000, y* 10000)
+print(x* 100000, y* 100000)
 print("---------------------------------------")
 data = [list(map(float, line.split())) for line in open("27data/27-31b.txt")]
 clasters = clasterization(data, 0.7)
@@ -48,4 +48,4 @@ print([len(c) for c in clasters])
 centrs = [centroid(c) for c in clasters]
 print(centrs)
 x, y = sum([p[0] for p in centrs]) / len(centrs), sum([p[1] for p in centrs]) / len(centrs)
-print(x* 10000, y* 10000)
+print(x* 100000, y* 100000)
