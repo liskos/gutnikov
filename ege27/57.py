@@ -43,7 +43,7 @@ print(x* 100000, y* 100000)
 print("---------------------------------------")
 data = [list(map(float, line.split())) for line in open("27data/27-57b.txt")]
 clasters = clasterization(data, 1)
-#clasters = [c for c in clasters if len(c) > 10]
+
 print([len(c) for c in clasters])
 centrs = [centroid(c) for c in clasters]
 print(centrs)
