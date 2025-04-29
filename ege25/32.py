@@ -5,11 +5,10 @@ def delit(n):
         if n % i == 0:
             a.add(i)
             a.add(n // i)
-    return sorted(a)
+    return sorted(a, reverse=True)
 
+m = [0, 0, [0, 0]]
 for i in range(394441, 394505 + 1):
-    m = 0
-    if len(delit(i)) > m:
-        m = len(delit(i))
-        if m == 48:
-            print(m, i, delit(i))
+    if len(delit(i)) > m[1]:
+        m = [i, len(delit(i)), delit(i)[:2]]
+print(m[0], *m[2])
