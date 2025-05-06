@@ -1,8 +1,10 @@
+def f(a, b):
+    return (a % 7 == 0) and (b % 17 != 0)
+
 r = []
 a = [int(x) for x in open("17data/17-1.txt")]
-d7 = [x for x in a if x % 7 == 0]
-nd17 = [x for x in a if x % 17 != 0]
-for i in range(1, len(a) - 1):
-    if a[i] in d7 and a[i + 1] in nd17:
-        r.append(sum(a[i:i + 1]))
+
+for i in range(len(a) - 1):
+    if  f(a[i], a[i+1]) or f(a[i+1], a[i]):
+        r.append(a[i] + a[i + 1])
 print(len(r), min(r))
